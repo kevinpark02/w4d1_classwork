@@ -11,12 +11,12 @@ class Board
     @rows = rows
   end
 
-  def [](pos)
+  def [](pos) #[1, 2]
     row, col = pos[0], pos[1]
     @rows[row][col]
   end
 
-  def []=(pos, mark)
+  def []=(pos, mark) # board[[1,2]] = :x
     raise "mark already placed there!" unless empty?(pos)
 
     row, col = pos[0], pos[1]
